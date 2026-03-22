@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Psicologia Organizacional</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body {
+  margin: 0;
+  padding-bottom: 70px;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f6f8;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  color: white;
+  padding: 50px 15px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 28px;
+}
+
+.hero p {
+  font-size: 16px;
+}
+
+/* CONTAINER */
+.container {
+  padding: 30px 15px;
+  text-align: center;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  width: 220px;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 4px solid white;
+}
+
+.card-content {
+  margin-top: 50px;
+}
+
+/* PERFIL */
+.profile {
+  display: none;
+  padding: 30px 15px;
+  text-align: center;
+}
+
+.profile img {
+  width: 140px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+/* SOCIAL */
+.social {
+  margin-top: 20px;
+}
+
+.social a {
+  font-size: 26px;
+  margin: 0 10px;
+  color: #2c3e50;
+}
+
+.social a:hover {
+  color: #25D366;
+}
+
+/* WHATSAPP */
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 25px;
+  padding: 12px 20px;
+  background: #25D366;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+/* BOTÃO */
+.back {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* RESUMO */
+.resumo {
+  background: white;
+  margin-top: 50px;
+  padding: 30px 15px;
+}
+
+.resumo p {
+  max-width: 600px;
+  margin: auto;
+}
+
+/* RODAPÉ FIXO */
+.footer {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  font-size: 13px;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero" id="home">
+  <h1>Psicologia Organizacional Estratégica</h1>
+  <p>Transformamos comportamento em resultados para empresas</p>
+</div>
+
+<!-- MENU -->
+<div class="container" id="menu">
+  <h2>Nossas Especialistas</h2>
+
+  <div class="cards">
+
+    <div class="card" onclick="openProfile('p1')">
+      <img src="p1.jfif">
+      <div class="card-content">
+        <h3>Psicóloga 1</h3>
+        <p>Clima Organizacional</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="openProfile('p2')">
+      <img src="p2.jfif">
+      <div class="card-content">
+        <h3>Psicóloga 2</h3>
+        <p>Recrutamento & Seleção</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="openProfile('p3')">
+      <img src="p3.jfif">
+      <div class="card-content">
+        <h3>Psicóloga 3</h3>
+        <p>NR-1 e Saúde Mental</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="resumo">
+    <h2>Sobre o Projeto</h2>
+    <p>
+      Nosso projeto tem como objetivo ajudar empresas a melhorarem seus resultados
+      através da gestão estratégica de pessoas.
+    </p>
+  </div>
+</div>
+
+<!-- PERFIS -->
+
+<div id="p1" class="profile">
+  <img src="p1.jfif">
+  <h2>Nome Psicóloga 1</h2>
+  <p>Especialista em clima organizacional.</p>
+
+  <div class="social">
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+
+  <a class="whatsapp-btn" href="https://wa.me/5511999999999" target="_blank">
+    <i class="fab fa-whatsapp"></i> Falar no WhatsApp
+  </a>
+
+  <br>
+  <button class="back" onclick="goBack()">Voltar</button>
+</div>
+
+<div id="p2" class="profile">
+  <img src="p2.jfif">
+  <h2>Nome Psicóloga 2</h2>
+  <p>Especialista em recrutamento.</p>
+
+  <div class="social">
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+
+  <a class="whatsapp-btn" href="https://wa.me/5511888888888" target="_blank">
+    <i class="fab fa-whatsapp"></i> Falar no WhatsApp
+  </a>
+
+  <br>
+  <button class="back" onclick="goBack()">Voltar</button>
+</div>
+
+<div id="p3" class="profile">
+  <img src="p3.jfif">
+  <h2>Nome Psicóloga 3</h2>
+  <p>Especialista em NR-1.</p>
+
+  <div class="social">
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+
+  <a class="whatsapp-btn" href="https://wa.me/5511777777777" target="_blank">
+    <i class="fab fa-whatsapp"></i> Falar no WhatsApp
+  </a>
+
+  <br>
+  <button class="back" onclick="goBack()">Voltar</button>
+</div>
+
+<!-- RODAPÉ -->
+<div class="footer" id="footer">
+  © 2026 - Todos os direitos reservados | Anderson Ribeiro
+</div>
+
+<script>
+function openProfile(id) {
+  document.getElementById("home").style.display = "none";
+  document.getElementById("menu").style.display = "none";
+  document.getElementById("footer").style.display = "none";
+
+  document.querySelectorAll(".profile").forEach(p => p.style.display = "none");
+  document.getElementById(id).style.display = "block";
+}
+
+function goBack() {
+  document.getElementById("home").style.display = "block";
+  document.getElementById("menu").style.display = "block";
+  document.getElementById("footer").style.display = "block";
+
+  document.querySelectorAll(".profile").forEach(p => p.style.display = "none");
+}
+</script>
+
+</body>
+</html>
